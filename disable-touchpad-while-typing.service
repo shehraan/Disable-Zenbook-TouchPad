@@ -1,0 +1,13 @@
+#.config/systemd/disable-touchpad-while-typing.service
+[Unit]
+Description=Disable touchpad while typing
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/disable-touchpad-typing.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
