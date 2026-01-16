@@ -1,0 +1,9 @@
+[Unit]
+Description=Disable touchpad when mouse connected
+
+[Service]
+ExecStart=/usr/local/bin/touchpad-disable-on-mouse.sh
+Restart=always
+
+[Install]
+WantedBy=default.target
